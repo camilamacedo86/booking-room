@@ -1,0 +1,16 @@
+<template name="header">
+    <header>
+        <br>
+        <div class="container theme-showcase" role="header">
+
+            {{> loginButtons}}
+
+            {{#if currentUser}}
+                {{>bar}}
+            {{else}}
+                {{>anonymousBar}}
+            {{/if}}
+
+        </div>
+    </header>
+</template>

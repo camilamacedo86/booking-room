@@ -1,0 +1,19 @@
+{
+  // General
+  "homeTitle": "Salão de Festas!",
+  "homeDescription": "Reservar de Salão de Festas!",
+  "notFound": "Não encontrado.",
+  "btnSave":"Salvar",
+  "btnCancel":"Cancelar",
+  "successMensage":"Operação realizada com sucesso",
+  "errorMensage":"Oops, não foi possível realizar esta operação!",
+
+  //Booking
+  "myBookings":"Reservas",
+  "bookingDate":"Data",
+  "flatNumber":"Apartamento",
+  "delBooking": "Remover"
+
+
+
+}

@@ -1,0 +1,90 @@
+<template name="bookings">
+{{#if currentUser}}
+    <div class="panel panel-default">
+
+        <div class="panel-heading">
+            <h3 class="panel-title" style="text-align: center">{{_ "myBookings"}}</h3>
+        </div>
+
+        <div class="panel-body">
+            <div class="table col-md-12">
+                <form id="newBookingForm" method="post">
+                    <br>
+                    <div class="row">
+
+                        <div id="datepicker" class="input-daterange">
+                            <label class="col-md-1 control-label">*{{_ "bookingDate"}}:</label>
+                            <div class="col-md-2" align="left">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                    <input PLACEHOLDER="dd/mm/yyyy" id="date" type="text" class="form-control validate[required] set-due-date form-control" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">*{{_ "flatNumber"}}:</label>
+                            <div class="col-md-2" align="left">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
+                                    <input PLACEHOLDER="Flat" id="flat" type="text" class="form-control validate[required] form-control" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-2" align="right">
+                                <div class="input-group">
+                                    <button type="button" id="btnSaveNewbooking" class="btn btn-default" >
+                                        <span class="glyphicon  glyphicon-saved">  </span>
+                                    </button>
+
+                                    <button type="button" id="btnCancelNewbooking" class="btn btn-default" >
+                                        <span class="glyphicon glyphicon-remove"> </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!--PAGINCACAO-->
+            {{> pagesNav}}
+            <div class="table col-md-12" align="left">
+                <div class="row">
+                    <div class="col-md-5">
+                        <p>
+                           <label>{{_ "bookingDate"}}</label>
+                            <a href="#" id="btnOrderByDate" role="button">
+                                <span class="glyphicon glyphicon-pushpin"> </span>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-md-5">
+                        <p>
+                            <label>{{_ "flatNumber"}}</label>
+                            <a href="#" id="btnOrderByFlat" role="button">
+                                <span class="glyphicon glyphicon-pushpin"> </span>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-md-2"><label>{{_ "delBooking"}}</label></div>
+                </div>
+
+                {{> pages}}
+            </div>
+        </div>
+    </div>
+{{/if}}
+</template>
+
+
+<template name="bookingsItem">
+    <div class="row">
+        <div class="col-md-5">{{date}}</div>
+        <div class="col-md-5">{{flat}}</div>
+        <div class="col-md-2">
+            <button type="button" id="btnDelete" class="btn btn-default" value="{{_id}}" >
+            <span class="glyphicon glyphicon-remove-sign"> </span> </button>
+        </div>
+    </div>
+</template>
