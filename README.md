@@ -1,4 +1,4 @@
-Projeto - Gerenciamento de reservas do salão de festas do prédio
+Projeto - Gerenciamento de reservas do salão de festas 
 ======================================
 
 ## Instalação
@@ -9,7 +9,7 @@ Projeto - Gerenciamento de reservas do salão de festas do prédio
 
 ## Usabilidade
 
-* Clone o projeto do repositório ( git clone )
+* Clone o projeto do repositório ( Eg. `git clone https://github.com/camilamacedo86/booking-room.git` )
 * No diretório do projeto execute o comando `$meteor`
 * Acesse o projeto em `http://localhost:3000/`
 
